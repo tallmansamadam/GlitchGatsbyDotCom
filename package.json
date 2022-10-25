@@ -1,0 +1,19 @@
+{
+  "name": "glitchgatsbydotcom",
+  "version": "1.0.0",
+  "description": "GlitchGatsbyWebsite(v1.0)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-smilga/starter-project-css-grid-udemy-portfolio-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-smilga/starter-project-css-grid-udemy-portfolio-project/issues"
+  },
+  "homepage": "https://github.com/john-smilga/starter-project-css-grid-udemy-portfolio-project#readme"
+}

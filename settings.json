@@ -1,0 +1,11 @@
+{
+  "editor.fontSize": 26,
+  "window.zoomLevel": 3,
+  "files.autoSave": "off",
+  "editor.tabSize": 1,
+  "editor.wordWrap": "on",
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.default/Formatter": "esbenp.prettier-vscode"
+}
