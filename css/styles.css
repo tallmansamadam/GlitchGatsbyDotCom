@@ -198,6 +198,10 @@ Navbar
   transition: var(--transition);
 }
 
+.nav-logo {
+  height: 5rem;
+}
+
 .nav-center {
   width: 100%;
   max-width: 1170px;
