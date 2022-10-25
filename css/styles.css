@@ -191,7 +191,7 @@ Navbar
 
 .nav-header {
   display: grid;
-  grid-template-columns: 1fr, 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
@@ -258,8 +258,11 @@ Sidebar
   display: grid;
   place-items: center;
   transition: var(--transition);
-  /* add later */
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%);
+}
+
+.show-sidebar {
+  transform: translateX(0);
 }
 
 .sidebar-links {
