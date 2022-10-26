@@ -12,6 +12,8 @@ Variables
 */
 
 :root {
+  /*   
+  /* Yellow/Gold Tones */
   /* dark shades of primary color*/
   --clr-primary-1: hsl(43, 86%, 17%);
   --clr-primary-2: hsl(43, 77%, 27%);
@@ -25,6 +27,24 @@ Variables
   --clr-primary-8: hsl(45, 86%, 81%);
   --clr-primary-9: hsl(45, 90%, 88%);
   --clr-primary-10: hsl(45, 100%, 96%);
+  /* end of Yellow/Gold Tones */
+
+  /* Red/Crimson Tones */
+  /* dark shades of primary color*/
+  --clr-primary-1: #750000;
+  --clr-primary-2: #800020;
+  --clr-primary-3: #960018;
+  --clr-primary-4: #a30000;
+  /* primary/main color */
+  --clr-primary-5: #d10000;
+  /* lighter shades of primary color */
+  --clr-primary-6: #da012d;
+  --clr-primary-7: #ff2e2e;
+  --clr-primary-8: #ff5c5c;
+  --clr-primary-9: #ff8a8a;
+  --clr-primary-10: hsl(45, 100%, 96%);
+  /* end of Red/Crimson Tones */
+
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
