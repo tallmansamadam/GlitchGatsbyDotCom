@@ -490,6 +490,7 @@ Services
 
 .service p {
   transition: var(--transition);
+  font-weight: 900;
 }
 
 .service:hover {
