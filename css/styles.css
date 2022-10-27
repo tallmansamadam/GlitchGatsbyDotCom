@@ -566,7 +566,7 @@ Projects
   object-fit: cover;
 }
 
-.project:hover .project-img {
+.project:hover:active .project-img {
   opacity: 0.1;
 }
 
@@ -583,7 +583,7 @@ Projects
   opacity: 0;
 }
 
-.project:hover::after {
+.project:hover:active::after {
   opacity: 1;
   transform: scale(0.8);
 }
