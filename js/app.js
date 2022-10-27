@@ -21,7 +21,7 @@ closeBtn.addEventListener("click", function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
-// mobile hover work-around
+// mobile hover work-around for project class
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting);
@@ -30,4 +30,15 @@ const observer = new IntersectionObserver((entries) => {
 });
 document
   .querySelectorAll(".project")
+  .forEach((project) => observer.observe(project, {}));
+
+// mobile hover work-around for project-img class
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("mobile-hover", entry.isIntersecting);
+    // Element.classList.add(project-)
+  });
+});
+document
+  .querySelectorAll(".project-img")
   .forEach((project) => observer.observe(project, {}));

@@ -566,7 +566,7 @@ Projects
   object-fit: cover;
 }
 
-.project:hover .project-img {
+.project .project-img .mobile-hover {
   opacity: 0.1;
 }
 
@@ -583,12 +583,7 @@ Projects
   opacity: 0;
 }
 
-.project:hover::after {
-  opacity: 1;
-  transform: scale(0.8);
-}
-
-.project-mobile-hover {
+.project-mobile-hover::after {
   opacity: 1;
   transform: scale(0.8);
 }
@@ -599,6 +594,15 @@ Projects
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
+  }
+
+  .project:hover .project-img {
+    opacity: 0.1;
+  }
+
+  .project:hover::after {
+    opacity: 1;
+    transform: scale(0.8);
   }
 }
 
