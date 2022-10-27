@@ -41,4 +41,4 @@ const observer = new IntersectionObserver((entries) => {
 });
 document
   .querySelectorAll(".project-img")
-  .forEach((project) => observer.observe(project, {}));
+  .forEach((projectimg) => observer.observe(projectimg, {}));
