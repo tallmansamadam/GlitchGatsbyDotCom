@@ -33,7 +33,7 @@ document
   .forEach((project) => observer.observe(project, {}));
 
 // mobile hover work-around for project-img class
-const observer = new IntersectionObserver((entries) => {
+const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("mobile-hover", entry.isIntersecting);
     // Element.classList.add(project-)
@@ -41,4 +41,4 @@ const observer = new IntersectionObserver((entries) => {
 });
 document
   .querySelectorAll(".project-img")
-  .forEach((projectimg) => observer.observe(projectimg, {}));
+  .forEach((projectimg) => observer2.observe(projectimg, {}));
