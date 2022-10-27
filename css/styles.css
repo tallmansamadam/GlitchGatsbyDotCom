@@ -566,7 +566,7 @@ Projects
   object-fit: cover;
 }
 
-.project .project-img .mobile-hover {
+.mobile-hover {
   opacity: 0.1;
 }
 
