@@ -588,6 +588,11 @@ Projects
   transform: scale(0.8);
 }
 
+.project-mobile-hover {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
 @media screen and (min-width: 676px) {
   .projects-center {
     display: grid;
