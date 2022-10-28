@@ -558,7 +558,7 @@ Projects
   opacity: 1;
 } */
 
-.project-info-hover {
+.project-info.project-info-hover {
   opacity: 1;
 }
 
@@ -574,7 +574,7 @@ Projects
   opacity: 0.1;
 } */
 
-.project-image-hover {
+.project-img.project-image-hover {
   opacity: 0.1;
 }
 
@@ -596,7 +596,7 @@ Projects
   transform: scale(0.8);
 } */
 
-.project-hover::after {
+.project.project-hover::after {
   opacity: 1;
   transform: scale(0.8);
 }
