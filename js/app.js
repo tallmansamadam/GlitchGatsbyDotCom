@@ -28,6 +28,8 @@ const options = {
 };
 
 const observer = new IntersectionObserver(callback, options);
+const observer2 = new IntersectionObserver(callback2, options);
+const observer3 = new IntersectionObserver(callback3, options);
 
 const projectCard = document.querySelector("#projectCard");
 
@@ -41,6 +43,26 @@ const callback = function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.toggle("project-hover");
+    }
+  });
+};
+
+observer2.observe(projectImage);
+
+const callback2 = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("project-image-hover");
+    }
+  });
+};
+
+observer3.observe(projectInfo);
+
+const callback3 = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("project--info-hover");
     }
   });
 };
