@@ -21,11 +21,11 @@ closeBtn.addEventListener("click", function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
-const options = {
-  root: document.querySelector("#viewport"),
-  rootMargin: "0px",
-  threshold: 1.0,
-};
+// const options = {
+//   root: document.querySelector("#viewport"),
+//   rootMargin: "-30 -30 50%",
+//   threshold: 1.0,
+// };
 
 // const observer = new IntersectionObserver(callback, options);
 // const observer2 = new IntersectionObserver(callback2, options);
@@ -71,6 +71,12 @@ const options = {
 //   observer3.observe(project);
 // });
 
+const options = {
+  root: document.querySelector("#viewport"),
+  rootMargin: "-270px 0px -270px 0px",
+  threshold: 1.0,
+};
+
 const projectCard = document.querySelectorAll("#projectCard");
 
 const projectImage = document.querySelectorAll("#projectImage");
@@ -83,6 +89,9 @@ const callback = function (entries, observer) {
     if (entry.isIntersecting) {
       entry.target.classList.toggle("project-hover");
     }
+    if (!entry.isIntersecting) {
+      entry.target.classList.toggle("project-hover");
+    }
   });
 };
 
@@ -91,12 +100,18 @@ const callback2 = function (entries, observer2) {
     if (entry.isIntersecting) {
       entry.target.classList.toggle("project-image-hover");
     }
+    if (!entry.isIntersecting) {
+      entry.target.classList.toggle("project-image-hover");
+    }
   });
 };
 
 const callback3 = function (entries, observer3) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      entry.target.classList.toggle("project-info-hover");
+    }
+    if (!entry.isIntersecting) {
       entry.target.classList.toggle("project-info-hover");
     }
   });
