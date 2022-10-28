@@ -21,24 +21,48 @@ closeBtn.addEventListener("click", function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
-// mobile hover work-around for project class
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting);
-    // Element.classList.add(project-)
-  });
-});
-document
-  .querySelectorAll(".project")
-  .forEach((project) => observer.observe(project, {}));
 
-// mobile hover work-around for project-img class
-const observer2 = new IntersectionObserver((entries2) => {
+
+let options = {
+  root: null, // relative to document viewport
+  rootMargin: "0px", // margin around root. Values are similar to css property. Unitless values not allowed
+  threshold: .75, // visible amount of item shown in relation to root
+};
+
+const projectCard = document.querySelectorAll(".project");
+const projectImage = document.querySelectorAll(".project-img");
+projectCard.forEach((project) => observer.observe(project, {}));
+projectImage.forEach((projectimg) => observer2.observe(projectimg, {}));
+
+
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting)
+    ;
+}, options)
+
+let observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("mobile-hover", entry.isIntersecting);
     // Element.classList.add(project-)
   });
 });
-document
-  .querySelectorAll(".project-img")
-  .forEach((projectimg) => observer2.observe(projectimg, {}));
+// mobile hover work-around for project class
+// const observer = new IntersectionObserver(
+//     // Element.classList.add(project-)
+//   });
+// // );
+// document
+//   .querySelectorAll(".project")
+//   .forEach((project) => observer.observe(project, {}));
+
+// mobile hover work-around for project-img class
+// let observer2 = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     entry.target.classList.toggle("mobile-hover", entry.isIntersecting);
+//     // Element.classList.add(project-)
+//   });
+// });
+// document
+//   .querySelectorAll(".project-img")
+//   .forEach((projectimg) => observer2.observe(projectimg, {}));
