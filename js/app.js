@@ -86,47 +86,52 @@ const projectInfo = document.querySelectorAll("#projectInfo");
 const callback = function (entries, observer) {
   entries.forEach((entry) => {
     console.log(entry);
+    let project = entry.target;
     if (entry.isIntersecting) {
-      entry.target.classList.toggle("project-hover");
+      project.classList.toggle("project-hover");
+      project.firstElementChild.classList.toggle("project-hover-image");
+      project.lastElementChild.lastElementChild.classList.toggle(
+        "project-hover-info"
+      );
     }
-    if (!entry.isIntersecting) {
-      entry.target.classList.toggle("project-hover");
-    }
+    // if (!entry.isIntersecting) {
+    //   entry.target.classList.toggle("project-hover");
+    // }
   });
 };
 
-const callback2 = function (entries, observer2) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.toggle("project-image-hover");
-    }
-    if (!entry.isIntersecting) {
-      entry.target.classList.toggle("project-image-hover");
-    }
-  });
-};
+// const callback2 = function (entries, observer2) {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.toggle("project-image-hover");
+//     }
+//     if (!entry.isIntersecting) {
+//       entry.target.classList.toggle("project-image-hover");
+//     }
+//   });
+// };
 
-const callback3 = function (entries, observer3) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.toggle("project-info-hover");
-    }
-    if (!entry.isIntersecting) {
-      entry.target.classList.toggle("project-info-hover");
-    }
-  });
-};
+// const callback3 = function (entries, observer3) {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.toggle("project-info-hover");
+//     }
+//     if (!entry.isIntersecting) {
+//       entry.target.classList.toggle("project-info-hover");
+//     }
+//   });
+// };
 
 const observer = new IntersectionObserver(callback, options);
-const observer2 = new IntersectionObserver(callback2, options);
-const observer3 = new IntersectionObserver(callback3, options);
+// const observer2 = new IntersectionObserver(callback2, options);
+// const observer3 = new IntersectionObserver(callback3, options);
 
 projectCard.forEach((project) => {
   observer.observe(project);
 });
 projectImage.forEach((project) => {
-  observer2.observe(project);
+  observer.observe(project);
 });
 projectInfo.forEach((project) => {
-  observer3.observe(project);
+  observer.observe(project);
 });
