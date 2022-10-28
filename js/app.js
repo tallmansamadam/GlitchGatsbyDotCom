@@ -37,7 +37,9 @@ const projectImage = document.querySelector("#projectImage");
 
 const projectInfo = document.querySelector("#projectInfo");
 
-observer.observe(projectCard);
+projectCard.forEach((project) => {
+  observer.observe(project);
+});
 
 const callback = function (entries, observer) {
   entries.forEach((entry) => {
@@ -47,7 +49,9 @@ const callback = function (entries, observer) {
   });
 };
 
-observer2.observe(projectImage);
+projectImage.forEach((project) => {
+  observer2.observe(project);
+});
 
 const callback2 = function (entries, observer) {
   entries.forEach((entry) => {
@@ -57,7 +61,9 @@ const callback2 = function (entries, observer) {
   });
 };
 
-observer3.observe(projectInfo);
+projectInfo.forEach((project) => {
+  observer3.observe(project);
+});
 
 const callback3 = function (entries, observer) {
   entries.forEach((entry) => {
