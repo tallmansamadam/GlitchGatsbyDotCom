@@ -21,30 +21,26 @@ closeBtn.addEventListener("click", function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
+const options = {
+  root: document.querySelector("#viewport"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
+const observer = new IntersectionObserver(callback, options);
 
+const projectCard = document.querySelector("#projectCard");
 
-const observer = new IntersectionObserver((entries) => {
+const projectImage = document.querySelector("#projectImage");
+
+const projectInfo = document.querySelector("#projectInfo");
+
+observer.observe(projectCard);
+
+const callback = function (entries, observer) {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting)
-    ;
-})
-// mobile hover work-around for project class
-// const observer = new IntersectionObserver(
-//     // Element.classList.add(project-)
-//   });
-// );
-document
-  .querySelectorAll(".project")
-  .forEach((project) => observer.observe(project, {}));
-
-// // mobile hover work-around for project-img class
-// let observer2 = new IntersectionObserver((entries2) => {
-//   entries.forEach((entry) => {
-//     entry.target.classList.toggle("mobile-hover", entry.isIntersecting);
-//     // Element.classList.add(project-)
-//   });
-// });
-// document
-//   .querySelectorAll(".project-img")
-//   .forEach((projectimg) => observer2.observe(projectimg, {}));
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("project-hover");
+    }
+  });
+};

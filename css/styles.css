@@ -554,7 +554,11 @@ Projects
   color: var(--clr-white);
 }
 
-.project:hover .project-info {
+/* .project:hover .project-info {
+  opacity: 1;
+} */
+
+.project-info-hover {
   opacity: 1;
 }
 
@@ -566,7 +570,11 @@ Projects
   object-fit: cover;
 }
 
-.mobile-hover {
+/* .project:hover .project-img {
+  opacity: 0.1;
+} */
+
+.project-image-hover {
   opacity: 0.1;
 }
 
@@ -583,7 +591,12 @@ Projects
   opacity: 0;
 }
 
-.project-mobile-hover::after {
+/* .project:hover::after {
+  opacity: 1;
+  transform: scale(0.8);
+} */
+
+.project-hover::after {
   opacity: 1;
   transform: scale(0.8);
 }
@@ -594,6 +607,10 @@ Projects
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
+  }
+
+  .project:hover .project-info {
+    opacity: 1;
   }
 
   .project:hover .project-img {
