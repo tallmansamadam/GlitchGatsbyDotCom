@@ -22,12 +22,12 @@ closeBtn.addEventListener("click", function () {
 date.innerHTML = new Date().getFullYear();
 
 // mobile hover work-around
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting);
-    // Element.classList.add(project-)
-  });
-});
-document
-  .querySelectorAll(".project")
-  .forEach((project) => observer.observe(project, {}));
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     entry.target.classList.toggle("project-mobile-hover", entry.isIntersecting);
+//     // Element.classList.add(project-)
+//   });
+// });
+// document
+//   .querySelectorAll(".project")
+//   .forEach((project) => observer.observe(project, {}));
