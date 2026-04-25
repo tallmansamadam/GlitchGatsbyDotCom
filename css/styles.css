@@ -12,34 +12,34 @@ Variables
 */
 
 :root {
-  /* Modern Minimal Theme - Electric Teal & Dark Slate */
-  /* Electric teal accent tones (primary) */
-  --clr-primary-1: #005a7a;
-  --clr-primary-2: #0073a1;
-  --clr-primary-3: #0089b8;
-  --clr-primary-4: #009ecf;
-  /* primary/main color - electric teal */
-  --clr-primary-5: #00b4d8;
+  /* Frutiger Jazz Punk - Vibrant Retro */
+  /* Hot magenta/purple accent tones (primary) */
+  --clr-primary-1: #a01e78;
+  --clr-primary-2: #c41e3a;
+  --clr-primary-3: #d81b60;
+  --clr-primary-4: #e81e63;
+  /* primary/main color - vibrant magenta */
+  --clr-primary-5: #f005e8;
   /* lighter shades */
-  --clr-primary-6: #48d1e6;
-  --clr-primary-7: #76e5f5;
-  --clr-primary-8: #a4f0fc;
-  --clr-primary-9: #d0f8fd;
-  /* secondary accent - dark slate */
-  --clr-primary-10: #2c3e50;
+  --clr-primary-6: #ff1493;
+  --clr-primary-7: #ff4081;
+  --clr-primary-8: #ff69b4;
+  --clr-primary-9: #ffb3d9;
+  /* secondary accent - cyan/electric blue */
+  --clr-primary-10: #00e5ff;
 
-  /* Cool light base greys */
-  --clr-grey-1: #f0f2f5;
-  --clr-grey-2: #e8eef5;
-  --clr-grey-3: #dfe5f0;
-  --clr-grey-4: #d4dce8;
+  /* Warm cream base */
+  --clr-grey-1: #faf7f2;
+  --clr-grey-2: #f5f1e8;
+  --clr-grey-3: #ede7dd;
+  --clr-grey-4: #e5dcd1;
   /* grey used for paragraphs */
-  --clr-grey-5: #7a8fa8;
-  --clr-grey-6: #6b7d96;
-  --clr-grey-7: #5d6f84;
-  --clr-grey-8: #3e4a5c;
-  --clr-grey-9: #2d3a4a;
-  --clr-grey-10: #1a2332;
+  --clr-grey-5: #5a4a42;
+  --clr-grey-6: #4a3a32;
+  --clr-grey-7: #3a2a22;
+  --clr-grey-8: #2a1a12;
+  --clr-grey-9: #1a0a02;
+  --clr-grey-10: #0f0605;
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -361,21 +361,23 @@ Hero
 
 .hero {
   background:
+    radial-gradient(ellipse at 15% 25%, rgba(240, 5, 232, 0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(0, 229, 255, 0.18) 0%, transparent 45%),
     repeating-linear-gradient(
-      90deg,
+      45deg,
       transparent 0px,
-      transparent 1px,
-      rgba(0, 180, 216, 0.03) 1px,
-      rgba(0, 180, 216, 0.03) 2px
+      transparent 3px,
+      rgba(240, 5, 232, 0.08) 3px,
+      rgba(240, 5, 232, 0.08) 4px
     ),
     repeating-linear-gradient(
-      0deg,
+      -45deg,
       transparent 0px,
-      transparent 1px,
-      rgba(44, 62, 80, 0.02) 1px,
-      rgba(44, 62, 80, 0.02) 2px
+      transparent 3px,
+      rgba(0, 229, 255, 0.08) 3px,
+      rgba(0, 229, 255, 0.08) 4px
     ),
-    linear-gradient(135deg, var(--clr-grey-1) 0%, var(--clr-grey-2) 100%);
+    linear-gradient(120deg, var(--clr-grey-1) 0%, var(--clr-grey-2) 50%, #fff9e6 100%);
   position: relative;
 }
 
@@ -442,14 +444,14 @@ About
 */
 .about {
   background:
-    linear-gradient(90deg, transparent 95%, rgba(0, 180, 216, 0.05) 100%),
-    linear-gradient(180deg, transparent 95%, rgba(44, 62, 80, 0.05) 100%),
+    linear-gradient(90deg, transparent 95%, rgba(240, 5, 232, 0.08) 100%),
+    linear-gradient(180deg, transparent 95%, rgba(0, 229, 255, 0.06) 100%),
     repeating-linear-gradient(
       45deg,
       transparent 0px,
-      transparent 1px,
-      rgba(0, 180, 216, 0.02) 1px,
-      rgba(0, 180, 216, 0.02) 2px
+      transparent 2px,
+      rgba(240, 5, 232, 0.04) 2px,
+      rgba(240, 5, 232, 0.04) 3px
     ),
     var(--clr-grey-2);
   position: relative;
@@ -506,7 +508,7 @@ Services
 
 .service-icon {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .service .underline {
