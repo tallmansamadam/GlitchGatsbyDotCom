@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glitch Gatsby || Home</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -149,11 +151,14 @@
       <div class="section-center about-center">
         <!-- about img -->
         <article class="about-img">
-          <img
-            src="./images/BlackandWhiteGatsby.jpg"
-            class="hero-photo"
-            alt="about img"
-          />
+          <picture>
+            <source media="(max-width: 991px)" srcset="./images/OcularOrganGatsby.jpg" />
+            <img
+              src="./images/BlackandWhiteGatsby.jpg"
+              class="hero-photo"
+              alt="about img"
+            />
+          </picture>
         </article>
         <!-- about info -->
         <article class="about-info">

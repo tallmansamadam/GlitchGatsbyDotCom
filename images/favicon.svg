@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .fedora-brim { fill: #f005e8; }
+      .fedora-crown { fill: #00e5ff; }
+      .sax-body { fill: #f005e8; stroke: #00e5ff; stroke-width: 1.5; }
+      .sax-keys { fill: #00e5ff; }
+      .band { fill: #00e5ff; }
+    </style>
+  </defs>
+
+  <!-- Fedora Hat -->
+  <!-- Brim -->
+  <ellipse cx="50" cy="35" rx="28" ry="8" class="fedora-brim"/>
+
+  <!-- Crown -->
+  <path d="M 35 35 Q 35 15, 50 10 Q 65 15, 65 35 Z" class="fedora-crown"/>
+
+  <!-- Hat band -->
+  <rect x="32" y="32" width="36" height="4" class="band" rx="2"/>
+
+  <!-- Saxophone -->
+  <!-- Main tube -->
+  <path d="M 75 40 Q 78 50, 75 65 L 72 65 Q 75 50, 72 40 Z" class="sax-body" stroke-linecap="round"/>
+
+  <!-- Bell (bottom of sax) -->
+  <ellipse cx="73.5" cy="68" rx="4" ry="6" class="sax-body"/>
+
+  <!-- Keys on sax -->
+  <circle cx="70" cy="48" r="2" class="sax-keys"/>
+  <circle cx="72" cy="55" r="2" class="sax-keys"/>
+  <circle cx="70" cy="62" r="2" class="sax-keys"/>
+
+  <!-- Mouthpiece -->
+  <rect x="74" y="38" width="2" height="4" class="sax-keys" rx="1"/>
+
+  <!-- Decorative line connecting elements -->
+  <line x1="65" y1="35" x2="72" y2="40" stroke="#f005e8" stroke-width="1.5" opacity="0.6"/>
+</svg>
